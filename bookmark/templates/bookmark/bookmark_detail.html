@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Add New{% endblock %}
+{% block content %}
+
+        <!--#csrf 공격-->
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{object.site_name}}
+        {{object.url}}
+
+{% endblock %}
